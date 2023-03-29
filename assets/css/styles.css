@@ -1,0 +1,260 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --heading-font: "Sen", sans-serif;
+    --primary-color: #ffb900;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Common */
+a {
+    text-decoration: none;
+}
+
+.main-content {
+    width: 1170px;
+    max-width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    background: #171100;
+    color: #fff;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 1.6rem;
+    opacity: 1;
+    transition: all 0.5s;
+    border-width: 0;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+/* Header */
+.header {
+    background-color: #fffcf4;
+    padding: 36px 0 10px;
+}
+
+.header.fixed {
+    position: sticky;
+    top: -26px;
+    left: 0;
+    z-index: 1;
+}
+
+.header__content {
+    display: flex;
+    align-items: center;
+}
+.header__nav {
+    margin-left: auto;
+}
+
+.header__nav ul {
+    display: flex;
+}
+
+.header__nav a {
+    position: relative;
+    padding: 10px 21px;
+    font-weight: 400;
+    color: #5f5b53;
+    transition: all 0.5s;
+}
+
+.header__nav .active a,
+.header__nav li:not(.active):hover a {
+    color: #171100;
+    text-shadow: 1px 0 0 currentColor;
+}
+
+.header__nav .active a::after {
+    content: "";
+    position: absolute;
+    left: 21px;
+    bottom: 2px;
+    display: block;
+    width: 12px;
+    height: 2px;
+    background: #171100;
+    border-radius: 1px;
+}
+
+.header .action {
+    margin-left: 49px;
+}
+
+.header__btn {
+    display: inline-block;
+    padding: 0 41px;
+    line-height: 50px;
+}
+
+/* Hero */
+.hero {
+    background-color: #fffcf4;
+}
+
+.hero__content {
+    display: flex;
+    padding: 56px 0 65px;
+}
+
+.hero__left {
+    position: relative;
+    width: 48%;
+}
+
+.hero__left .image {
+    width: 470px;
+    height: 685px;
+    object-position: center;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.hero__item-group {
+    position: absolute;
+    right: 0;
+    bottom: 48px;
+    padding: 24px;
+    width: 270px;
+    background-color: #fff;
+    box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+}
+
+.hero__item {
+    display: flex;
+    align-items: center;
+}
+
+.hero__item + .hero__item {
+    margin-top: 14px;
+}
+
+.hero__item-icon {
+    width: 48px;
+    height: 48px;
+    margin-right: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff9e8;
+    border-radius: 50%;
+}
+
+.hero__item-desc p {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.85;
+    color: #5f5b53;
+}
+
+.hero__item-desc h3 {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #171100;
+}
+
+.hero__right {
+    width: 52%;
+    padding-left: 130px;
+}
+
+.hero__heading {
+    margin-bottom: 22px;
+    font-family: var(--heading-font);
+    font-weight: 700;
+    font-size: 5.8rem;
+    line-height: 1.17;
+    letter-spacing: -0.02em;
+    color: #171100;
+}
+
+.hero__desc {
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #5f5b53;
+}
+
+.hero__cta {
+    margin-top: 38px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 48px;
+}
+
+.hero__btn {
+    background-color: var(--primary-color);
+    line-height: 64px;
+    padding: 0 33px;
+    font-weight: 600;
+    font-size: 18px;
+    color: #fff;
+    margin-right: 28px;
+}
+
+.hero__watch {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.hero__watch button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 14px;
+    background: #ffffff;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.07);
+    border-radius: 50%;
+    border: none;
+}
+
+.hero__watch span {
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: #171100;
+}
+
+.hero__stats {
+    margin-top: 8px;
+}
+
+.hero__stats strong {
+    font-family: var(--heading-font);
+    font-weight: 700;
+    font-size: 4.4rem;
+    line-height: 1.23;
+    color: #171100;
+    margin-right: 6px;
+}
+
+.hero__stats span {
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #5f5b53;
+    margin-right: 28px;
+}
