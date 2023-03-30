@@ -55,6 +55,13 @@ a {
     color: #5f5b53;
 }
 
+.item-desc {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.86;
+    color: #5f5b53;
+}
+
 .btn {
     background: #171100;
     color: #fff;
@@ -81,9 +88,14 @@ a {
     --line-clamp: 2;
 }
 
-.work-break{
+.line-clamp.row-4 {
+    --line-clamp: 4;
+}
+
+.work-break {
     word-break: break-all;
 }
+
 /* Header */
 .header {
     background-color: #fffcf4;
@@ -332,7 +344,6 @@ a {
     border: 1px solid #e2dfda;
     border-radius: 12px;
     transition: all 0.5s;
-    
 }
 
 .popular__item:hover {
@@ -376,13 +387,6 @@ a {
     color: var(--primary-color);
 }
 
-.popular__item-body .item-desc {
-    font-weight: 400;
-    font-size: 1.4rem;
-    line-height: 1.86;
-    color: #5f5b53;
-}
-
 .popular__item-body .row-bottom {
     margin-top: 12px;
     display: flex;
@@ -399,4 +403,73 @@ a {
 
 .popular__btn:hover {
     background-color: var(--primary-color);
+}
+
+/* Feedback */
+.feedback {
+    padding: 96px 0;
+    background: #2e2100;
+}
+
+.feedback__list{
+    display: flex;
+    overflow: hidden;
+}
+
+.feedback__item {
+    flex-shrink: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateX(-100%);
+}
+
+.feedback__info .avatar {
+    width: 72px;
+    height: 72px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+
+.feedback__info .name {
+    font-family: var(--heading-font);
+    margin-top: 18px;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 1.42;
+    color: #f7f7f7;
+}
+
+.feedback__info .item-desc {
+    margin: 4px 0 28px;
+}
+
+.feedback__dots-group {
+    display: flex;
+}
+
+.feedback__dots-group .dot {
+    width: 6px;
+    height: 6px;
+    background: #634700;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.feedback__dots-group .dot.active {
+    background-color: var(--primary-color);
+}
+
+.feedback__quote {
+    width: 66%;
+}
+
+.feedback__quote blockquote {
+    margin-left: 30px;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 2.6rem;
+    line-height: 1.54;
+    color: #ffffff;
 }
